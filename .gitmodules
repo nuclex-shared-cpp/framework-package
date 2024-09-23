@@ -1,3 +1,8 @@
+[submodule "build-system"]
+	path = build-system
+	url = ../../nuclex-shared/build-system.git
+	branch = main
+	update = rebase
 [submodule "Nuclex.Support.Native"]
 	path = Nuclex.Support.Native
 	url = ../../nuclex-shared-cpp/Nuclex.Support.Native.git
@@ -8,9 +13,9 @@
 	url = ../../nuclex-shared-cpp/Nuclex.Audio.Native.git
 	branch = main
 	update = rebase
-[submodule "build-system"]
-	path = build-system
-	url = ../../nuclex-shared/build-system.git
+[submodule "third-party/nuclex-celero"]
+	path = third-party/nuclex-celero
+	url = ../../nuclex-builds/nuclex-celero.git
 	branch = main
 	update = rebase
 [submodule "third-party/nuclex-flac"]
@@ -18,43 +23,43 @@
 	url = ../../nuclex-builds/nuclex-flac.git
 	branch = main
 	update = rebase
+[submodule "third-party/nuclex-googletest"]
+	path = third-party/nuclex-googletest
+	url = ../../nuclex-builds/nuclex-googletest.git
+	branch = main
+	update = rebase
+[submodule "third-party/nuclex-ogg"]
+	path = third-party/nuclex-ogg
+	url = ../../nuclex-builds/nuclex-ogg.git
+	branch = main
+	update = rebase
+[submodule "third-party/nuclex-opus"]
+	path = third-party/nuclex-opus
+	url = ../../nuclex-builds/nuclex-opus.git
+	branch = main
+	update = rebase
 [submodule "third-party/nuclex-opusfile"]
 	path = third-party/nuclex-opusfile
 	url = ../../nuclex-builds/nuclex-opusfile.git
 	branch = main
 	update = rebase
-[submodule "third-party/nuclex-opus"]
-	path = third-party/nuclex-opus
-	url = ../../nuclex-builds/nuclex-opus
-	branch = main
-	update = rebase
-[submodule "third-party/nuclex-ogg"]
-	path = third-party/nuclex-ogg
-	url = ../../nuclex-builds/nuclex-ogg
-	branch = main
-	update = rebase
-[submodule "third-party/nuclex-wavpack"]
-	path = third-party/nuclex-wavpack
-	url = ../../nuclex-builds/nuclex-wavpack
+[submodule "third-party/nuclex-opusenc"]
+	path = third-party/nuclex-opusenc
+	url = ../../nuclex-builds/nuclex-opusenc.git
 	branch = main
 	update = rebase
 [submodule "third-party/nuclex-moodycamelqueues"]
 	path = third-party/nuclex-moodycamelqueues
-	url = ../../nuclex-builds/nuclex-moodycamelqueues
+	url = ../../nuclex-builds/nuclex-moodycamelqueues.git
 	branch = main
 	update = rebase
-[submodule "third-party/nuclex-celero"]
-	path = third-party/nuclex-celero
-	url = ../../nuclex-builds/nuclex-celero
+[submodule "third-party/nuclex-vorbis"]
+	path = third-party/nuclex-vorbis
+	url = ../../nuclex-builds/nuclex-vorbis.git
 	branch = main
 	update = rebase
-[submodule "third-party/nuclex-googletest"]
-	path = third-party/nuclex-googletest
-	url = ../../nuclex-builds/nuclex-googletest
-	branch = main
-	update = rebase
-[submodule "third-party/nuclex-opusenc"]
-	path = third-party/nuclex-opusenc
-	url = ../../nuclex-builds/nuclex-opusenc.git
+[submodule "third-party/nuclex-wavpack"]
+	path = third-party/nuclex-wavpack
+	url = ../../nuclex-builds/nuclex-wavpack.git
 	branch = main
 	update = rebase
