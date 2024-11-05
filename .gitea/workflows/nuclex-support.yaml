@@ -1,0 +1,50 @@
+name: Nuclex.Support Build, Test and Publish
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        library: [Nuclex.Support.Native, Nuclex.Platform.Native]
+    runs-on: ${{matrix.os}}
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Configure
+      working-directory: ${{github.workspace}}/${{matrix.library}}
+      run: >
+        cmake
+          -B ${{github.workspace}}/${{matrix.library}}/obj
+          -D CMAKE_BUILD_TYPE=Release
+          -D BUILD_UNIT_TESTS=ON
+          -D BUILD_BENCHMARK=ON
+          -D BENCHMARK_THIRD_PARTY_LIBRARIES=OFF
+
+    - name: Build
+      working-directory: ${{github.workspace}}/${{matrix.library}}
+      run: >
+        cmake
+          --build ${{github.workspace}}/${{matrix.library}}/obj
+          --config Release
+          --parallel 4
+
+    - name: Install (locally)
+      working-directory: ${{github.workspace}}/${{matrix.library}}
+      run: >
+        cmake
+          --install ${{github.workspace}}/${{matrix.library}}/obj
+          --config Release
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: binaries-${{matrix.os}}
+        path: |
+          ${{github.workspace}}/${{matrix.library}}/bin/**/*.dll
+          ${{github.workspace}}/${{matrix.library}}/bin/**/*.so
+          ${{github.workspace}}/${{matrix.library}}/bin/**/*.exe
