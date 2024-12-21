@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"name": "build-system",
+			"path": "build-system"
+		},
+		{
+			"name": "Nuclex.Audio.Native",
+			"path": "Nuclex.Audio.Native"
+		},
+		{
+			"name": "Nuclex.Support.Native",
+			"path": "Nuclex.Support.Native"
+		}
+	]
+}
